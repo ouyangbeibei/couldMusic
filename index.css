@@ -1,0 +1,160 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+*::before, *::after{ box-sizing: border-box;}
+ul,ol{list-style: none;}
+
+
+body{ font-size:3.7vw;}
+a{ text-decoration: none;}
+section >h2:first-child{
+    font-size: 4.5vw;
+    border-left: 2px solid #d43c33;
+    margin: 0.8em 0;
+    font-weight: normal;
+    padding-left: 2vw;
+}
+
+.topbar {
+    background: #d43c33; 
+    padding: 4.5vw 2.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.topbar .logo{
+    width: 38vw;
+}
+.topbar .downloadApp{
+    line-height: 7.5vw;
+    border: 2px solid white;
+    border-radius:4.25vw;
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 0 .5em;
+}
+
+
+.siteNav{}
+.siteNav > ol{
+    display: flex;
+    text-align: center;
+    border-bottom: 1px solid #cccccc;
+    font-size: 1.1em;
+
+}
+.siteNav > ol>li{
+    flex: 1;
+}
+.siteNav > ol> li.active{
+    color: #d43c33;
+}
+.siteNav > ol> li> span{
+    line-height: 11vw;
+    display: inline-block;
+    position: relative;
+}
+.siteNav > ol> li.active> span::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    border-top: 2px solid #d43c33;
+    left: -2vw; right: -2vw;
+}
+
+
+.playLists{
+    margin-top: 5.5vw;
+}
+.playLists > ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 0.93em;
+}
+.playLists > ul img{
+    width: 100%;
+}
+.playLists > ul> li{
+    width: calc(33.333333% - 0.5vw);
+    margin-bottom: 4vw;
+}
+.playLists > ul> li p{
+    padding: 0 1vw;
+    line-height: 4vw;
+    height: 8vw;
+    overflow: hidden;
+    font-size: 13px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.lastesMusic{}
+.lastesMusic > ol{
+    padding-left: calc(2.6vw + 2px);
+}
+.lastesMusic > ol> li{
+    border-bottom: 1px solid #e2e2e3;
+    padding: 1.5vw 0;
+    position: relative;
+}
+.lastesMusic > ol> li h3{
+    font-size: 4.53vw;
+    font-weight: normal;
+}
+.lastesMusic > ol> li p{
+    font-size: 3.2vw; color: #888;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.lastesMusic > ol> li svg.play{
+    width: 9vw;
+    height: 9vw;
+    position: absolute;
+    right: 4vw;
+    top: 50%;
+    transform: translateY(-50%);
+    fill: #AAA;
+}
+.lastesMusic > ol> li svg.sq{
+    width: 4.5vw;
+    height: 4.5vw;
+    margin-right: 0.5em;
+    fill: #fe672e;
+
+}
+
+section.art{
+    background: url(./img/art-bg.png) no-repeat;
+    padding-top: 16vw;
+}
+section.art .logo{
+    text-align: center;
+}
+section.art .logosvg{
+    width: 61.7vw;
+}
+section.art .openApp{
+    display: block;
+    max-width: 80vw;
+    padding: 1vw 0;
+    margin: 0 auto;
+    text-align: center;
+    color:#d33a31;
+    border: 1px solid #d33a31;
+    font-size: 4.3vw;
+    text-decoration: none;
+    line-height: 8vw;
+    border-radius: 5.3vw;
+    margin-bottom: 1vw;
+    margin-top: 3vw;
+}
+section.art .copyright{
+    font-size: 3.2vw;
+    transform: scale(.75);
+    text-align: center;
+    color: #888;
+    padding-bottom: 5vw;
+}
