@@ -1,0 +1,111 @@
+*{margin:0; padding:0; box-sizing: border-box;}
+*::before, *::after{box-sizing: border-box;}
+
+/* 旋转 */
+@keyframes circle{
+  0% {
+    transform:  rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.page{display: flex; flex-direction: column; height: 100vh;
+  background: transparent url(../img/page.png) no-repeat center;
+  background-position: 50%;
+  background-size: auto 100%;}
+.page:after {
+    position: absolute;
+    left: 0;
+    right: 0;
+  }  
+.page:after{
+  content: " ";
+  bottom: 0;
+  top: 0;
+  background-color: rgba(0,0,0,.5);
+}
+
+
+/* 光盘 */
+.disc-container{ position: relative; z-index: 88;}
+.disc-container .icon{ width: 10vw; fill: white;}
+
+.disc-container .icon-wrapper {position: absolute; z-index: 99;
+   display: flex; justify-content: center; align-items:center;
+   border: 1px solid white; height: 15vw; width: 15vw;
+   border-radius: 50%; background: rgba(0,0,0,0.5);
+  }
+
+.disc-container .pointer{ width: 24vw; position: absolute; left: 45vw;}
+.disc-container .disc{ display: flex; justify-content: center; align-items: center; margin-top: 18vw;}
+.disc-container .ring{ width: 72vw;}
+.disc-container .light{ width: 72vw; position: absolute; } 
+.disc-container .cover{ width: 44.5vw; position: absolute; border-radius: 50%; 
+  animation: circle 20s infinite linear; 
+  animation-play-state: paused;}
+.disc-container.playing .light,
+.disc-container.playing .cover{
+  animation-play-state: running;
+}
+
+/* 播放暂停 */
+.disc-container .icon-pause{ display: none;}
+.disc-container.playing .icon-pause{ display: block;}
+.disc-container.playing .icon-play{ display: none;}
+
+/* 歌曲描述 */
+.song-description{
+  flex-grow: 1;
+  text-align: center;
+  color: #beb9b9;
+  margin-top: 20px;
+  z-index: 1;
+}
+.song-description .lines{
+  transition: transform 0.3s;
+}
+.song-description h1{
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.1;
+  color: #fefefe;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;}
+.song-description p{
+  font-size: 14px;
+  line-height: 24px;
+}
+.song-description .lyric{
+  height: 72px;
+  overflow: hidden;
+}
+.song-description p.active{
+  color: white;
+}
+/* 链接 */
+.page > .links{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #D43B32;
+  z-index: 1;
+}
+.page > .links > a{
+  width: 38.5vw;
+  margin: 1em;
+  text-align: center;
+  border: 1px solid #D43B32;
+  background: transparent;
+  padding: 1.5vw;
+  color: inherit;
+  text-decoration: none;
+  border-radius: 3px;
+  letter-spacing: 1vw;
+}
+.page > .links a.main{
+  background: #d43b32;
+  color: white;
+}
