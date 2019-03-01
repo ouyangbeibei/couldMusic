@@ -1,0 +1,25 @@
+{
+  "name": "couldmusic",
+  "version": "1.0.0",
+  "description": "预览：https://ouyangbeibei.github.io/couldMusic/.",
+  "main": "song.js",
+  "dependencies": {
+    "leancloud-storage": "^3.11.1",
+    "node-static": "^0.7.11"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "static",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ouyangbeibei/couldMusic.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ouyangbeibei/couldMusic/issues"
+  },
+  "homepage": "https://github.com/ouyangbeibei/couldMusic#readme"
+}
