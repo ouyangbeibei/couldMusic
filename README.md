@@ -8,3 +8,5 @@
 2. http-server -c-1
 3. node server 8080
 4. open http://127.0.0.1:8080/index.html
+
+

@@ -23,7 +23,7 @@ $(function () {
             })
             $('#lastesMusicLoading').remove()
         }, function (error) {
-            alert('获取歌曲失败')
+            alert('获取歌曲失败了！')
         })
     }, 1000)
 
